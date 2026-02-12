@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #183D3D;
+  --color-primary-dark: #102A2A;
+  --color-primary-light: #2C5252;
+  --color-accent: #C4A484;
+  --color-accent-dark: #A88B6A;
+  --color-accent-light: #DBC1A7;
+  --color-background-alt: #F9F8F6;
+  --color-background-cream: #F5F2EF;
+
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #555555;
+  --color-text-light: #888888;
+  --color-border: #E6E6E6;
+
+  --font-primary: var(--font-primary), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-heading), ui-serif, Georgia, serif;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  --transition-base: 400ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-primary text-gray-900 bg-white antialiased overflow-x-hidden;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold tracking-tight text-gray-900;
+  }
+}
+
+/* ========================================
+   COMPONENTS (Legacy Compatibility Layer)
+   ======================================== */
+@layer components {
+  .container {
+    @apply max-w-[1280px] mx-auto px-6;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full font-semibold transition-all duration-300 active:scale-95;
+  }
+
+  .btn-primary {
+    @apply bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white;
+  }
+
+  .section-title {
+    @apply font-heading text-3xl md:text-4xl text-center mb-12 text-gray-900 relative pb-4;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-[var(--color-accent)];
+  }
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 600ms ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ========================================
+   CUSTOM UTILITIES
+   ======================================== */
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)];
+}
+
+@keyframes scrollHint {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-scroll-hint {
+  animation: scrollHint 3s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+.hero-gradient-overlay {
+  background: radial-gradient(circle at 50% 50%, rgba(196, 164, 132, 0.08) 0%, transparent 70%);
+}
