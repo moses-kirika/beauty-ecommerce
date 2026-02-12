@@ -99,7 +99,7 @@ export default function ProfileClient() {
 
     const handleLogout = () => {
         logout();
-        router.push('/');
+        router.push('/login');
     };
 
     const handleAddressSubmit = async (e: React.FormEvent) => {
