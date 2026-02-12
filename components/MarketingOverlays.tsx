@@ -10,8 +10,6 @@ export default function MarketingOverlays() {
     const [showAbandoned, setShowAbandoned] = useState(false);
     const [showPWA, setShowPWA] = useState(false);
 
-    if (pathname === '/login' || pathname === '/signup') return null;
-
     useEffect(() => {
         // Exit intent simulation
         const handleMouseLeave = (e: MouseEvent) => {
@@ -35,6 +33,8 @@ export default function MarketingOverlays() {
             clearTimeout(pwaTimer);
         };
     }, [cart.length]);
+
+    if (pathname === '/login' || pathname === '/signup') return null;
 
     return (
         <>

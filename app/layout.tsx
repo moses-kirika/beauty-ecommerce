@@ -17,6 +17,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BottomNav from "@/components/BottomNav";
 import MarketingOverlays from "@/components/MarketingOverlays";
+import Providers from "@/components/Providers";
 import { ShopProvider } from "@/context/ShopContext";
 import { AuthProvider } from "@/context/AuthContext";
 
@@ -31,15 +32,17 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
       </head>
       <body className={dmSans.className}>
-        <ShopProvider>
-          <AuthProvider>
-            <Header />
-            {children}
-            <Footer />
-            <BottomNav />
-            <MarketingOverlays />
-          </AuthProvider>
-        </ShopProvider>
+        <Providers>
+          <ShopProvider>
+            <AuthProvider>
+              <Header />
+              {children}
+              <Footer />
+              <BottomNav />
+              <MarketingOverlays />
+            </AuthProvider>
+          </ShopProvider>
+        </Providers>
       </body>
     </html>
   );

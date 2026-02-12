@@ -9,15 +9,14 @@ import SearchModal from '@/components/SearchModal';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
+    const pathname = usePathname();
     const { cart, wishlist } = useShop();
     const { user } = useAuth();
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const pathname = usePathname();
-    const isAuthPage = pathname === '/login' || pathname === '/signup';
 
-    if (isAuthPage) return null;
+    const isAuthPage = pathname === '/login' || pathname === '/signup';
 
     const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
     const wishlistCount = wishlist.length;
@@ -44,6 +43,8 @@ export default function Header() {
         { label: 'Skincare', href: '/shop?category=Skincare' },
         { label: 'Body', href: '/shop?category=Body' },
     ];
+
+    if (isAuthPage) return null;
 
     return (
         <>

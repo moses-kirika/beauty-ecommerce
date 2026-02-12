@@ -98,25 +98,52 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     const socialLogin = async (provider: 'google' | 'facebook') => {
         setIsLoading(true);
-        // Simulate social Redirect/Auth
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        try {
+            // Import NextAuth signIn dynamically
+            const { signIn } = await import('next-auth/react');
 
-        const mockUser: User = {
-            id: 'social-123',
-            name: provider === 'google' ? 'Google User' : 'Facebook User',
-            email: `social@${provider}.com`,
-            avatar: provider === 'google'
-                ? 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_\"G\"_logo.svg'
-                : 'https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg',
-            addresses: [],
-            paymentMethods: [],
-            loyaltyPoints: 0
-        };
+            // Trigger NextAuth OAuth flow
+            const result = await signIn(provider, {
+                redirect: false,
+                callbackUrl: '/profile'
+            });
 
-        setUser(mockUser);
-        localStorage.setItem('beautify_user', JSON.stringify(mockUser));
-        setIsLoading(false);
-        return true;
+            if (result?.error) {
+                console.error('OAuth error:', result.error);
+                setIsLoading(false);
+                return false;
+            }
+
+            if (result?.ok) {
+                // Fetch session to get user data
+                const { getSession } = await import('next-auth/react');
+                const session = await getSession();
+
+                if (session?.user) {
+                    const mockUser: User = {
+                        id: session.user.id || 'oauth-user',
+                        name: session.user.name || `${provider} User`,
+                        email: session.user.email || `user@${provider}.com`,
+                        avatar: session.user.image || undefined,
+                        addresses: [],
+                        paymentMethods: [],
+                        loyaltyPoints: 0
+                    };
+
+                    setUser(mockUser);
+                    localStorage.setItem('beautify_user', JSON.stringify(mockUser));
+                    setIsLoading(false);
+                    return true;
+                }
+            }
+
+            setIsLoading(false);
+            return false;
+        } catch (error) {
+            console.error('Social login error:', error);
+            setIsLoading(false);
+            return false;
+        }
     };
 
     const logout = () => {

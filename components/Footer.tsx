@@ -9,6 +9,7 @@ export default function Footer() {
 
     if (isAuthPage) return null;
 
+
     return (
         <footer className="bg-[var(--color-primary-dark)] text-white pt-24 pb-12">
             <div className="container mx-auto px-6">
