@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Beautify Hub | Curated Luxury Skincare & Ethical Beauty"
+    absolute: "Beautify | Curated Luxury Skincare & Ethical Beauty"
   },
   description: "Experience a higher standard of self-care. Discover our curated collection of luxury skincare rituals, where scientific efficacy meets nature's wisdom.",
 };

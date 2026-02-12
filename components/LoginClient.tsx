@@ -158,7 +158,7 @@ export default function LoginClient() {
 
                         <div className="mt-12 text-center">
                             <p className="text-sm text-[var(--color-text-secondary)] font-light font-primary">
-                                New to Beauty Hub? {' '}
+                                New to Beautify? {' '}
                                 <Link href="/signup" className="text-[var(--color-primary)] font-bold hover:text-[var(--color-accent)] transition-colors ml-1 underline underline-offset-4">
                                     Create Membership
                                 </Link>

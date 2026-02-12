@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: "Privacy Policy | Security & Data Protection",
-    description: "Learn how Beautify Hub protects your personal data. Our commitment to privacy ensures your curated beauty journey remains secure.",
+    description: "Learn how Beautify protects your personal data. Our commitment to privacy ensures your curated beauty journey remains secure.",
 };
 
 export default function PrivacyPage() {

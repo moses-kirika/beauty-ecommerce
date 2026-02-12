@@ -70,7 +70,7 @@ export default function Header() {
                         <div className="flex-shrink-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2 text-center">
                             <Link href="/" className="group block">
                                 <h1 className={`font-heading font-bold tracking-tight transition-all duration-500 ${isScrolled ? 'text-2xl text-[var(--color-primary)]' : 'text-3xl lg:text-4xl text-[var(--color-primary)]'}`}>
-                                    BEAUTY HUB
+                                    BEAUTIFY
                                 </h1>
                             </Link>
                         </div>

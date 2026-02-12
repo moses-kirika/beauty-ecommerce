@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
     title: "Our Story | Nature's Wisdom & Scientific Efficacy",
-    description: "Discover the philosophy behind Beautify Hub. We prioritize transparency, efficacy, and sustainability in every luxury skincare ritual we curate.",
+    description: "Discover the philosophy behind Beautify. We prioritize transparency, efficacy, and sustainability in every luxury skincare ritual we curate.",
 };
 
 export default function AboutPage() {

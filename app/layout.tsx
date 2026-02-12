@@ -7,8 +7,8 @@ const bodoni = Bodoni_Moda({ subsets: ["latin"], variable: '--font-heading' });
 
 export const metadata: Metadata = {
   title: {
-    default: "Beautify Hub | Curated Luxury Skincare & Ethical Beauty",
-    template: "%s | Beautify Hub"
+    default: "Beautify | Curated Luxury Skincare & Ethical Beauty",
+    template: "%s | Beautify"
   },
   description: "Elevating daily rituals with nature-inspired, scientifically-proven skincare. Sustainability meets luxury in every bottle.",
 };

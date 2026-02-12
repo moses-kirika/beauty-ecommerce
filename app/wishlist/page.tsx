@@ -3,7 +3,7 @@ import WishlistClient from '@/components/WishlistClient';
 
 export const metadata: Metadata = {
     title: "Your Wishlist | Saved Luxury Rituals",
-    description: "Keep track of your favorite luxury skincare products. Save items for later and build your perfect beauty ritual with Beautify Hub.",
+    description: "Keep track of your favorite luxury skincare products. Save items for later and build your perfect beauty ritual with Beautify.",
 };
 
 export default function WishlistPage() {
