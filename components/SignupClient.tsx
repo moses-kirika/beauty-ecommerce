@@ -52,8 +52,8 @@ export default function SignupClient() {
                 <div className="hidden md:flex flex-1 p-6">
                     <div className="w-full h-full rounded-2xl overflow-hidden relative border border-[var(--color-border)]">
                         <img
-                            src="/images/auth-image.jpg"
-                            alt="Beauty Rituals"
+                            src="/images/products/unsplash-1570172619644-dfd03ed5d881.jpg"
+                            alt="Natural Skincare Collection"
                             className="absolute inset-0 w-full h-full object-cover grayscale-[0.2] scale-x-[-1]"
                         />
                         <div className="absolute inset-0 bg-[var(--color-primary)]/10 mix-blend-multiply"></div>

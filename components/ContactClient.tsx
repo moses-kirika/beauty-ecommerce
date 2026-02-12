@@ -53,8 +53,8 @@ export default function ContactClient() {
                             <div className="mt-20 hidden lg:block">
                                 <div className="aspect-square relative overflow-hidden bg-[var(--color-background-alt)] rounded-2xl shadow-lg border border-[var(--color-border)]">
                                     <img
-                                        src="/images/products/unsplash-1542838132-92c53300491e.jpg"
-                                        alt="Editorial Detail"
+                                        src="/images/products/unsplash-1505944270255-bd2b68af6422.jpg"
+                                        alt="Product Essence"
                                         className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                                     />
                                 </div>

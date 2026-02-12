@@ -15,14 +15,14 @@ export default function AboutPage() {
                     <div className="lg:w-1/2">
                         <div className="relative aspect-[4/5] overflow-hidden">
                             <img
-                                src="/images/products/unsplash-1556228578-f3d41e029475.jpg"
-                                alt="Our Founder"
+                                src="/images/products/unsplash-1594744803329-e58b31de8bf5.jpg"
+                                alt="Our Heritage"
                                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                             />
                         </div>
                     </div>
                     <div className="lg:w-1/2">
-                        <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[var(--color-accent)] mb-6 block">Our Story</span>
+                        <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[var(--color-accent)] mb-6 block">Our Essence</span>
                         <h1 className="text-5xl md:text-6xl font-heading font-medium text-[var(--color-primary-dark)] mb-8 leading-none">
                             Nature's <br /> <span className="italic text-[var(--color-accent)]">Wisdom.</span>
                         </h1>
@@ -39,8 +39,8 @@ export default function AboutPage() {
                             </p>
                         </div>
                         <div className="mt-12">
-                            <img src="/images/products/unsplash-1542838132-92c53300491e.jpg"
-                                alt="Signature" className="h-24 opacity-60" />
+                            <img src="/images/products/unsplash-1556228720-195a672e8a03.jpg"
+                                alt="Product Detail" className="h-24 opacity-60" />
                         </div>
                     </div>
                 </div>

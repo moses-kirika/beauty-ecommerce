@@ -61,7 +61,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             name: email.split('@')[0],
             email: email,
             phone: '+254 700 000 000',
-            avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop',
             addresses: [
                 { id: 'addr-1', type: 'Home', street: 'Riverside Drive', city: 'Nairobi', state: 'Nairobi', zip: '00100', country: 'Kenya', isDefault: true }
             ],
