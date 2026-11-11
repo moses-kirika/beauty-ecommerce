@@ -120,4 +120,13 @@ This application emphasizes:
 
 ## License
 
-This project is for educational and demonstration purposes.
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 20-Hour Future Development Roadmap
+
+- [ ] Payment Gateway Integration: Integrate Stripe / PayPal API for global payment processing and secure checkout flows (6 hours)
+- [ ] Backend & Database Migration: Transition static mock data to PostgreSQL with Prisma ORM for live inventory management (5 hours)
+- [ ] Admin Order Management Dashboard: Build administrative tools for order tracking, stock updates, and user role management (4 hours)
+- [ ] Automated E2E Testing Suite: Implement Playwright integration tests covering cart state, context providers, and checkout flows (3 hours)
+- [ ] SEO & Performance Optimization: Dynamic Open Graph generation, sitemap routing, and progressive web performance optimization (2 hours)
+
